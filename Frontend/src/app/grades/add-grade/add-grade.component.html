@@ -1,0 +1,51 @@
+<div class="add-grade-container">
+  <h2>Add grade for student</h2>
+
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <form (submit)="addGrade()" class="grade-form">
+    <div class="form-group">
+      <label for="student">Student:</label>
+      <select id="student" [(ngModel)]="selectedStudent" name="student" required>
+        <option [ngValue]="null">Choose Student</option>
+        <option *ngFor="let student of students" [ngValue]="student.id">
+          {{ student.firstname }} {{ student.lastname }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <select id="subject" [(ngModel)]="selectedSubject" name="subject" required>
+        <option [ngValue]="null">Pick Subject</option>
+        <option *ngFor="let subject of subjects" [value]="subject.id">
+          {{ subject.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="score">Grade (1-6):</label>
+      <input
+        type="number"
+        id="score"
+        [(ngModel)]="score"
+        name="score"
+        min="1"
+        max="6"
+        step="0.5"
+        required
+      >
+    </div>
+
+    <button type="submit" class="submit-btn" [disabled]="!selectedStudent || !selectedSubject || !score">
+      Dodaj ocenę
+    </button>
+  </form>
+</div>

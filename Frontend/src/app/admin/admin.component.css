@@ -1,0 +1,35 @@
+.title {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.board-section {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.server-content {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.formatted-text {
+  white-space: pre-line;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #333;
+}
+
+.error-message {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.loading {
+  color: #999;
+  font-style: italic;
+}

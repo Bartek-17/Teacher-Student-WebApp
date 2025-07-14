@@ -1,0 +1,32 @@
+<div class="subject-list-container">
+  <h2>Subjects</h2>
+
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search for a subject" (input)="search()">
+    <button (click)="sortAlphabetically()">Sort Alphabetically</button>
+  </div>
+
+  <table class="subjects-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Teacher</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let subject of filteredSubjects">
+      <td>{{ subject.id }}</td>
+      <td>{{ subject.name }}</td>
+      <td>
+        <span *ngIf="subject.teacher">{{ subject.teacher.firstName }} {{ subject.teacher.lastName }}</span>
+        <span *ngIf="!subject.teacher">No teacher assigned</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="filteredSubjects.length === 0" class="no-results">
+    No subjects found.
+  </div>
+</div>

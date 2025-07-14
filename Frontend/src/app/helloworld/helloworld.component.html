@@ -1,0 +1,21 @@
+<div class="info-card">
+  <div *ngIf="info.token != '{}'; else loggedOut">
+    <h5>Your Information</h5>
+    <div class="info-item">
+      <span class="info-label">Username:</span> {{info.username}}
+    </div>
+    <div class="info-item">
+      <span class="info-label">Roles:</span> {{info.authorities}}
+    </div>
+    <div class="info-item">
+      <span class="info-label">Token:</span>
+      <div class="token-text">{{info.token}}</div>
+    </div>
+  </div>
+
+  <ng-template #loggedOut>
+    <div class="message-box">
+      Please login to see your information.
+    </div>
+  </ng-template>
+</div>

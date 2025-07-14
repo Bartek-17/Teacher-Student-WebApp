@@ -1,0 +1,12 @@
+<div class="user-board-container">
+  <h2 class="title">User Dashboard</h2>
+
+  <div class="board-section">
+    <h4>Content from Server</h4>
+    <div class="server-content formatted-text">
+      <p *ngIf="board">{{ board }}</p>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+      <div *ngIf="!board && !errorMessage" class="loading">Loading data...</div>
+    </div>
+  </div>
+</div>

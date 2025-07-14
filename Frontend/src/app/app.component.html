@@ -1,0 +1,45 @@
+<main class="main">
+  <div class="content">
+    <!-- Login screen for not logged users -->
+    <div *ngIf="!authority" class="login-container">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Main interface when logged in -->
+    <div *ngIf="authority" class="dashboard-container">
+      <div class="navigation">
+        <h2>Menu</h2>
+        <!-- Links available for everyone -->
+        <a routerLink="hello">Your Information</a>
+        <a routerLink="subjects">Subjects</a>
+
+        <!-- Links for user -->
+        <div *ngIf="authority === 'user'" class="user-links">
+          <h2>User Options</h2>
+          <a routerLink="user">User Page</a>
+          <a routerLink="my-grades">My Grades</a>
+        </div>
+
+        <!-- Links for teachers -->
+        <div *ngIf="authority === 'admin'" class="admin-links">
+          <h2>Admin Options</h2>
+          <a routerLink="admin">Admin Page</a>
+          <a routerLink="grades">All Grades</a>
+          <a routerLink="add-grade">Add Grade</a>
+<!--          <a routerLink="admin/subjects">Manage Subjects</a>-->
+          <a routerLink="admin/subjects/add">Add Subject</a>
+
+        </div>
+
+        <!-- Logout button -->
+        <div class="logout-section">
+          <button (click)="logout()" class="logout-btn">Logout</button>
+        </div>
+      </div>
+
+      <div class="content-area">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</main>

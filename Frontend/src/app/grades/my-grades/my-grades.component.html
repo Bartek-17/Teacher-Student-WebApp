@@ -1,0 +1,26 @@
+<div class="grades-container">
+  <h2>My Grades</h2>
+
+  <div *ngIf="!grades || grades.length === 0; else hasGrades" class="no-grades">
+    No grades available at the moment.
+  </div>
+
+  <ng-template #hasGrades>
+    <table>
+      <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Teacher</th>
+        <th>Grade</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let grade of grades">
+        <td>{{ grade.subject.name }}</td>
+        <td>{{ grade.subject.teacher.firstName }} {{ grade.subject.teacher.lastName }}</td>
+        <td>{{ grade.score }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

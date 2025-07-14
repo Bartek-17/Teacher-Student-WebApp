@@ -1,0 +1,101 @@
+<div class="students-container">
+  <h2>Students</h2>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label for="studentFirstName">Student firstname:</label>
+      <input id="studentFirstName" #studentFirstName />
+    </div>
+
+    <div class="form-group">
+      <label for="studentLastName">Student lastname:</label>
+      <input id="studentLastName" #studentLastName />
+    </div>
+
+    <div class="form-group">
+      <label for="studentEmail">Student email:</label>
+      <input id="studentEmail" #studentEmail />
+    </div>
+
+    <div class="form-group">
+      <label for="studentTelephone">Student telephone:</label>
+      <input id="studentTelephone" #studentTelephone />
+    </div>
+
+    <button
+      class="btn"
+      (click)="
+        add(
+          studentFirstName.value,
+          studentLastName.value,
+          studentEmail.value,
+          studentTelephone.value
+        );
+        studentFirstName.value = '';
+        studentLastName.value = '';
+        studentEmail.value = '';
+        studentTelephone.value = ''
+      "
+    >
+      Add Student
+    </button>
+  </div>
+
+  <!-- NgIf: show when the list is empty -->
+  <div *ngIf="!studentList || studentList.length === 0; else hasStudents" class="no-students">
+    No students in the list yet.
+  </div>
+
+  <ng-template #hasStudents>
+    <ul class="student-list">
+      <li
+        *ngFor="let student of studentList; let i = index"
+        class="student-item"
+        [ngClass]="{ 'bg-light': i % 2 === 0, 'bg-white': i % 2 !== 0 }"
+      >
+        <div class="student-info">
+          <span class="student-id">{{ student.id }}</span>
+          <span class="student-name">{{ student.firstname }} {{ student.lastname }}</span>
+          <span class="student-email">{{ student.email }}</span>
+          <span class="student-phone">{{ student.telephone }}</span>
+        </div>
+
+        <div class="student-actions">
+          <button
+            class="btn btn-warning btn-sm"
+            title="update"
+            (click)="
+              update(
+                studentFirstName.value,
+                studentLastName.value,
+                studentEmail.value,
+                studentTelephone.value,
+                student
+              );
+              studentFirstName.value = '';
+              studentLastName.value = '';
+              studentEmail.value = '';
+              studentTelephone.value = ''
+            "
+          >
+            Update
+          </button>
+
+          <button
+            class="btn btn-danger btn-sm"
+            title="delete"
+            (click)="delete(student)"
+          >
+            Delete
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="actions-container">
+      <button class="btn btn-danger" title="delete all" (click)="deleteAll()">
+        Delete All Students
+      </button>
+    </div>
+  </ng-template>
+</div>

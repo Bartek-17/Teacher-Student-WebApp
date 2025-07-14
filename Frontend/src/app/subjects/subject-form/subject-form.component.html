@@ -1,0 +1,32 @@
+<div class="container">
+  <h2>Add New Subject</h2>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="subjectForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Subject Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+        [ngClass]="{'is-invalid': subjectForm.get('name')?.invalid && subjectForm.get('name')?.touched}"
+      >
+      <div *ngIf="subjectForm.get('name')?.invalid && subjectForm.get('name')?.touched" class="invalid-feedback">
+        <div *ngIf="subjectForm.get('name')?.errors?.['required']">Subject name is required</div>
+        <div *ngIf="subjectForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters long</div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-secondary me-md-2" [routerLink]="['/subjects']">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="subjectForm.invalid || isSubmitting">
+        <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+        Add Subject
+      </button>
+    </div>
+  </form>
+</div>
