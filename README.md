@@ -117,25 +117,29 @@ Frontend will be running at: `http://localhost:4200`
 ## 🖼 Screenshots
 
 ### Login Page
-
-<img width="959" height="569" alt="Screenshot1" src="https://github.com/user-attachments/assets/d086fef5-c9ef-419b-8008-23bdbedd48f7" />
+<img src="https://github.com/user-attachments/assets/d086fef5-c9ef-419b-8008-23bdbedd48f7" width="600" />
 
 ### User Dashboard
-
-<img width="959" height="563" alt="Screenshot2" src="https://github.com/user-attachments/assets/f3f93127-c366-492b-92e8-302bace06e7f" />
+<img src="https://github.com/user-attachments/assets/f3f93127-c366-492b-92e8-302bace06e7f" width="600" />
 
 ### Teacher Dashboard
-
-<img width="959" height="563" alt="Screenshot6" src="https://github.com/user-attachments/assets/91416f1e-be35-4aa8-ac69-3c299781e4dd" />
-
+<img src="https://github.com/user-attachments/assets/91416f1e-be35-4aa8-ac69-3c299781e4dd" width="600" />
 
 ### Subject List
-
-<img width="959" height="560" alt="Screenshot4" src="https://github.com/user-attachments/assets/fe8e0e65-ef01-4ed5-a1fe-84a881173ae5" />
-
+<img src="https://github.com/user-attachments/assets/fe8e0e65-ef01-4ed5-a1fe-84a881173ae5" width="600" />
 
 ### Grade Assignment Form
+<img src="https://github.com/user-attachments/assets/60222216-a054-450a-aca4-42117bf41947" width="600" />
 
-<img width="959" height="556" alt="Screenshot8" src="https://github.com/user-attachments/assets/60222216-a054-450a-aca4-42117bf41947" />
+---
 
+## 🔐 User and Admin Creation
+
+> ⚠️ This application does **not** include a registration form for creating users or admins via the frontend.
+
+You must manually create users through the backend API or directly in the database.
+
+### ➤ Example with Postman
+
+<img src="https://github.com/user-attachments/assets/1a96767f-a375-416a-8a35-7ec4d8a69760" width="600" />
 
