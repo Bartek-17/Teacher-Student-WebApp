@@ -120,17 +120,22 @@ Frontend will be running at: `http://localhost:4200`
 
 <img width="959" height="569" alt="Screenshot1" src="https://github.com/user-attachments/assets/d086fef5-c9ef-419b-8008-23bdbedd48f7" />
 
-### Student Dashboard
-![Student Dashboard](screenshots/student-dashboard.png)
+### User Dashboard
+
+<img width="959" height="563" alt="Screenshot2" src="https://github.com/user-attachments/assets/f3f93127-c366-492b-92e8-302bace06e7f" />
 
 ### Teacher Dashboard
-![Teacher Dashboard](screenshots/teacher-dashboard.png)
+
+<img width="959" height="563" alt="Screenshot6" src="https://github.com/user-attachments/assets/91416f1e-be35-4aa8-ac69-3c299781e4dd" />
+
 
 ### Subject List
-![Subject List](screenshots/subject-list.png)
+
+<img width="959" height="560" alt="Screenshot4" src="https://github.com/user-attachments/assets/fe8e0e65-ef01-4ed5-a1fe-84a881173ae5" />
+
 
 ### Grade Assignment Form
-![Grade Form](screenshots/grade-form.png)
 
-> Add your screenshots to the `screenshots/` folder and update the file names above as needed.
+<img width="959" height="556" alt="Screenshot8" src="https://github.com/user-attachments/assets/60222216-a054-450a-aca4-42117bf41947" />
+
 
