@@ -19,19 +19,19 @@
 	</properties>
 
 	<dependencies>
-		<!-- Podstawowe zależności Spring Boot -->
+		<!-- Basic SpringBoot dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- Obsługa JPA (bazy danych) -->
+		<!-- JPA handling (database) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- Sterownik PostgreSQL -->
+		<!-- PostgreSQL -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -44,7 +44,7 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
-		<!-- Obsługa JWT -->
+		<!-- JWT -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
@@ -63,7 +63,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Walidacja modelu -->
+		<!-- Model validation -->
 		<dependency>
 			<groupId>jakarta.validation</groupId>
 			<artifactId>jakarta.validation-api</artifactId>
@@ -75,7 +75,7 @@
 			<version>8.0.2.Final</version>
 		</dependency>
 
-		<!-- Obsługa JSP oraz JSTL -->
+		<!-- JSP and JSTL -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
@@ -86,14 +86,14 @@
 			<version>1.2</version>
 		</dependency>
 
-		<!-- Parsowanie XML przy użyciu Jacksona -->
+		<!-- XML parsing with Jackson -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 			<version>2.18.3</version>
 		</dependency>
 
-		<!-- Zależności testowe -->
+		<!-- Dependency test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
