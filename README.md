@@ -129,7 +129,8 @@ Frontend will be running at: `http://localhost:4200`
 <img src="https://github.com/user-attachments/assets/fe8e0e65-ef01-4ed5-a1fe-84a881173ae5" width="600" />
 
 ### Grade Assignment Form
-<img src="https://github.com/user-attachments/assets/60222216-a054-450a-aca4-42117bf41947" width="600" />
+<img src="https://github.com/user-attachments/assets/ede126fd-634f-4648-b419-0e2461855786" width="600" />
+
 
 ---
 
