@@ -117,7 +117,8 @@ Frontend will be running at: `http://localhost:4200`
 ## 🖼 Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+
+<img width="959" height="569" alt="Screenshot1" src="https://github.com/user-attachments/assets/d086fef5-c9ef-419b-8008-23bdbedd48f7" />
 
 ### Student Dashboard
 ![Student Dashboard](screenshots/student-dashboard.png)
