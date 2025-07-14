@@ -22,11 +22,11 @@ This is a full-stack web application for managing university entities such as st
 
 ## 👤 User Roles
 
-- **Student**
+- **User (Student)**
   - View their subjects
   - View grades for subjects
 
-- **Teacher (Admin)**
+- **Admin (Teacher)**
   - Add new subjects
   - Assign grades to students
 
